@@ -101,7 +101,7 @@ Revise topics covered till now.
 
 Revise previous topics.
 
-## Stack
+## Binary Tree
 ### Day 17 
 55. How can you traverse binary tree?
 57. Write an algorithm to do level order traversal of binary tree? 
