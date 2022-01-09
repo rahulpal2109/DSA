@@ -1,7 +1,7 @@
-# 60 Days of Code
+# 60 Days of Code 
 Practice DS - 60 days challenge
 
-Following 60 days roadmap from - https://docs.google.com/document/d/1SM92efk8oDl8nyVw8NHPnbGexTS9W-1gmTEYfEurLWQ/edit
+Following 60 days roadmap from - Striver sheet -> https://docs.google.com/document/d/1SM92efk8oDl8nyVw8NHPnbGexTS9W-1gmTEYfEurLWQ/edit
 
 
 ### Day 1: (Arrays)
