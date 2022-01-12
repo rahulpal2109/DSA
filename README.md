@@ -6,7 +6,8 @@ All DSA stuff goes in here, structured over multiple modules/projects.
 Idea is to complete Challenge 1, Challenge 2 and Challenge 3 for now. But we can do in parallel too.
 
 
-## Details:
+## Details below:
+
 ### Challenge 1
 
 Java2Blog 100 questions -> https://java2blog.com/java-coding-interview-questions/
