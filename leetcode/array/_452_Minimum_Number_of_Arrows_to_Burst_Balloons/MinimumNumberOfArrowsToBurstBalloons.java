@@ -12,17 +12,6 @@ import java.util.Arrays;
     Space complexity: O(1)
  */
 public class MinimumNumberOfArrowsToBurstBalloons {
-    public static void main(String[] args) {
-        int[][] test1 = {{0,16},{2,8},{1,6},{7,12}};
-        assert findMinArrowShots(test1) == 2;
-
-        int[][] test2 = {{1,2},{3,4},{5,6},{7,8}};
-        assert findMinArrowShots(test2) == 4;
-
-        int[][] test3 = {{1,2},{2,3},{3,4},{4,5}};
-        assert findMinArrowShots(test3) == 2;
-    }
-
     public static int findMinArrowShots(int[][] points) {
         Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
         int end = points[0][1];
@@ -35,5 +24,16 @@ public class MinimumNumberOfArrowsToBurstBalloons {
             }
         }
         return arrows;
+    }
+
+    public static void main(String[] args) {
+        int[][] test1 = {{0,16},{2,8},{1,6},{7,12}};
+        assert findMinArrowShots(test1) == 2;
+
+        int[][] test2 = {{1,2},{3,4},{5,6},{7,8}};
+        assert findMinArrowShots(test2) == 4;
+
+        int[][] test3 = {{1,2},{2,3},{3,4},{4,5}};
+        assert findMinArrowShots(test3) == 2;
     }
 }
