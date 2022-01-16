@@ -6,8 +6,12 @@ package leetcode.array._849_Maximize_Distance_to_Closest_Person;
     https://leetcode.com/problems/maximize-distance-to-closest-person/
     Medium
 
-    Time complexity: O()
-    Space complexity: O()
+    Time complexity: O(3N) -> ~O(N)
+    Space complexity: O(1)
+
+    Ref:
+    1. https://leetcode.com/problems/maximize-distance-to-closest-person/solution/ -> below impl.
+    Check for other solutions
  */
 public class MaximizeDistanceToClosestPerson {
     private static int maxDistToClosest(int[] seats) {
