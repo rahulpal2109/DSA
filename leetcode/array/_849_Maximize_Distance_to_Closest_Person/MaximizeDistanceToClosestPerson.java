@@ -14,6 +14,7 @@ package leetcode.array._849_Maximize_Distance_to_Closest_Person;
     Check for other solutions
  */
 public class MaximizeDistanceToClosestPerson {
+
     private static int maxDistToClosest(int[] seats) {
         int result = 0;
         int diff = 0;
@@ -26,6 +27,7 @@ public class MaximizeDistanceToClosestPerson {
                 diff = 0;
             }
         }
+
 
         for (int i = 0; i < size; i++) {
             if (seats[i] == 1) {
