@@ -87,19 +87,19 @@ public class MaximumSumOfNonAdjacentNodes {
         root3.setLeft(new Node(2));
         root3.setRight(new Node(3));
 
-        root3.getLeft().setLeft(new Node(1));
+        root3.getLeft().setLeft(new Node(4));
 
-        root3.getRight().setLeft(new Node(4));
-        root3.getRight().setRight(new Node(5));
+        root3.getRight().setLeft(new Node(5));
+        root3.getRight().setRight(new Node(6));
 
-        System.out.println("Test Case 1 -");
+        System.out.println("Test Case 3 -");
         System.out.println("Input: \n");
         TreeTraversal.inOrder(root1);
         System.out.println();
 
-        int result = getMaxSum(root1);
-        System.out.println("Output: " + result);
-        assert result == 11;
+        int result3 = getMaxSum(root3);
+        System.out.println("Output: " + result3);
+        assert result3 == 16;
 
         System.out.println();
         System.out.println("------------------------------------------------");
