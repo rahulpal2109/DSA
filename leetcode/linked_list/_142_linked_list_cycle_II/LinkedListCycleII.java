@@ -41,34 +41,26 @@ public class LinkedListCycleII {
         return null;
     }
 
-    static void print(ListNode node) {
-        System.out.println("Printing Linked List");
-        while (node != null) {
-            System.out.print(node.getVal() + " ");
-            node = node.getNext();
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args) {
         ListNode head1 = new ListNode(3);
         ListNode n1 = new ListNode(2);
         head1.setNext(n1);
-
         ListNode n2 = new ListNode(0);
         n1.setNext(n2);
-
         ListNode n3 = new ListNode(-4);
         n2.setNext(n3);
-
         n2.setNext(n1);
-
         //print(head1);
-
-        //System.out.println(detectCycle(head1).getVal());
-        //System.out.println(detectCycle(head1).getVal());
-
         assert detectCycle(head1).getVal() == 2;
+
+        ListNode head2 = new ListNode(1);
+        ListNode head2n1 = new ListNode(2);
+        head2.setNext(head2n1);
+        head2n1.setNext(head2);
+        assert detectCycle(head2).getVal() == 1;
+
+        ListNode head3 = new ListNode(1);
+        assert detectCycle(head3) == null;
     }
 
 }

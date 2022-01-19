@@ -25,4 +25,13 @@ public class ListNode {
     public void setNext(ListNode next) {
         this.next = next;
     }
+
+    static void print(ListNode node) {
+        System.out.println("Printing Linked List");
+        while (node != null) {
+            System.out.print(node.getVal() + " ");
+            node = node.getNext();
+        }
+        System.out.println();
+    }
 }
