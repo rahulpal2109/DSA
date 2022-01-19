@@ -66,6 +66,7 @@ public class LinkedListCycleII {
         //print(head1);
 
         //System.out.println(detectCycle(head1).getVal());
+        //System.out.println(detectCycle(head1).getVal());
 
         assert detectCycle(head1).getVal() == 2;
     }
