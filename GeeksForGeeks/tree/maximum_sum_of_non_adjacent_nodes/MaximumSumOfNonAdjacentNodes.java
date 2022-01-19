@@ -9,6 +9,8 @@ import util.TreeTraversal;
     https://practice.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1#
     Medium
 
+    Time Complexity: O(Number of nodes in the tree).
+    Space Complexity: O(Height of the Tree).
  */
 public class MaximumSumOfNonAdjacentNodes {
     static Pair getMaxSumHelper(Node node) {
