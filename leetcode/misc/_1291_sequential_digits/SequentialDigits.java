@@ -1,9 +1,16 @@
 package leetcode.misc._1291_sequential_digits;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
+/*
+    1291. Sequential Digits
+
+    https://leetcode.com/problems/sequential-digits/
+    Medium
+
+    Time complexity: O()
+    Space complexity: O()
+ */
 public class SequentialDigits {
     private static List<Integer> sequentialDigits(int low, int high) {
         List<Integer> res = new ArrayList<>();
@@ -37,5 +44,20 @@ public class SequentialDigits {
         result2.add(6789);
         result2.add(12345);
         assert sequentialDigits(1000, 13000).equals(result2);
+    }
+
+    // another approach
+    public List<Integer> sequentialDigits2(int low, int high) {
+        List<Integer> ans = new ArrayList<>();
+        Queue<Integer> q = new LinkedList<>();
+        if(low <= 0 && high >= 0) ans.add(0);
+        for(int i = 1; i < 10; i++) q.add(i);
+        while(q.size() > 0){
+            int curr = q.remove();
+            if(curr >= low && curr <= high) ans.add(curr);
+            int onesDigit = curr % 10;
+            if(onesDigit < 9 && curr * 10 + onesDigit + 1 <= high) q.add(curr * 10 + onesDigit + 1);
+        }
+        return ans;
     }
 }
