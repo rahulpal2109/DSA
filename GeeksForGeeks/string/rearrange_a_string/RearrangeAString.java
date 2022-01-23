@@ -1,5 +1,14 @@
 package GeeksForGeeks.string.rearrange_a_string;
 
+/*
+    Rearrange a string
+
+    https://practice.geeksforgeeks.org/problems/rearrange-a-string4100/1#
+    Easy
+
+    Time complexity: O()
+    Space complexity: O()
+ */
 public class RearrangeAString {
     static final int MAX_CHAR = 26;
     private static String arrangeString(String s)
