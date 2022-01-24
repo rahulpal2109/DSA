@@ -5,7 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /*
+    Next Permutation
 
+    https://practice.geeksforgeeks.org/problems/next-permutation5226/1#
+    Medium
+
+    Time complexity: O(n)
+    Space complexity: O(1)
  */
 public class NextPermutation {
     private static List<Integer> nextPermutation(int n, int arr[]) {
@@ -16,7 +22,7 @@ public class NextPermutation {
                 break;
             }
         }
-        ArrayList<Integer> res=new ArrayList<Integer>();
+        List<Integer> res=new ArrayList<>();
         if(i==0) {
             for(i=n-1;i>=0;i--) {
                 res.add(arr[i]);
@@ -55,7 +61,12 @@ public class NextPermutation {
 
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 3, 6, 5, 4};
-        int[] res1 = {1, 2, 4, 3, 5, 6};
-        assert nextPermutation(arr1.length, arr1).equals(Arrays.asList(res1));
+        List<Integer> resultList1 = Arrays.asList(1, 2, 4, 3, 5, 6);
+        assert resultList1.equals(nextPermutation(arr1.length, arr1));
+
+        int[] arr2 = {3, 2, 1};
+        List<Integer> resultList2 = Arrays.asList(1, 2, 3);
+        assert resultList2.equals(nextPermutation(arr2.length, arr2));
+
     }
 }
