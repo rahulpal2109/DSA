@@ -11,7 +11,7 @@ package GeeksForGeeks.binary_search.capacity_to_ship_packages_within_D_days;
     Space Complexity: O(1)
  */
 public class CapacityToShipPackagesWithinDDays {
-    static int leastWeightCapacity(int[] arr, int N, int D) {
+    private static int leastWeightCapacity(int[] arr, int N, int D) {
         // get total weight
         int totalW = 0;
         for (int w: arr) {
@@ -34,7 +34,7 @@ public class CapacityToShipPackagesWithinDDays {
         return lowW;
     }
 
-    static boolean isPossible(int[] arr, int N, int D, int capacity, int totalW) {
+    private static boolean isPossible(int[] arr, int N, int D, int capacity, int totalW) {
         int i = 0;
         int days = 1;
         int totalSum = 0;
@@ -56,5 +56,13 @@ public class CapacityToShipPackagesWithinDDays {
             days++;
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {1,2,1};
+        assert leastWeightCapacity(arr1, 3, 2) == 3;
+
+        int[] arr2 = {9,8,10};
+        assert leastWeightCapacity(arr2, 3, 3) == 10;
     }
 }

@@ -7,7 +7,5 @@ public class Test {
         System.out.println("hello world");
         int[][] points = new int[3][3];
         Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
-
     }
-
 }
