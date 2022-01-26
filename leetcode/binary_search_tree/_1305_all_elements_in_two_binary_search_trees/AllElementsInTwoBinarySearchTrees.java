@@ -3,6 +3,7 @@ package leetcode.binary_search_tree._1305_all_elements_in_two_binary_search_tree
 import util.Node;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -16,7 +17,7 @@ import java.util.Stack;
     Space Complexity: O()
  */
 public class AllElementsInTwoBinarySearchTrees {
-    private List<Integer> getAllElements(Node root1, Node root2) {
+    private static List<Integer> getAllElements(Node root1, Node root2) {
         Stack<Node> st1 = new Stack<>();
         Stack<Node> st2 = new Stack<>();
 
@@ -45,5 +46,16 @@ public class AllElementsInTwoBinarySearchTrees {
         return res;
     }
 
+    public static void main(String[] args) {
+        Node root1 = new Node(2);
+        root1.setLeft(new Node(1));
+        root1.setRight(new Node(4));
 
+        Node root2 = new Node(1);
+        root2.setLeft(new Node(0));
+        root2.setRight(new Node(3));
+
+        ArrayList<Integer> result1 = new ArrayList<>(Arrays.asList(0,1,1,2,3,4));
+        assert getAllElements(root1, root2).equals(result1);
+    }
 }
