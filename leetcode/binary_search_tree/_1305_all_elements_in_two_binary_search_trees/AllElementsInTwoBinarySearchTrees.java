@@ -57,5 +57,14 @@ public class AllElementsInTwoBinarySearchTrees {
 
         ArrayList<Integer> result1 = new ArrayList<>(Arrays.asList(0,1,1,2,3,4));
         assert getAllElements(root1, root2).equals(result1);
+
+        Node root3 = new Node(1);
+        root3.setRight(new Node(8));
+
+        Node root4 = new Node(8);
+        root4.setLeft(new Node(1));
+
+        ArrayList<Integer> result2 = new ArrayList<>(Arrays.asList(1,1,8,8));
+        assert getAllElements(root3, root4).equals(result2);
     }
 }
