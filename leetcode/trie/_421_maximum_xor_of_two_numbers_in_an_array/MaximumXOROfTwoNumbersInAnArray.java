@@ -12,7 +12,7 @@ import java.util.HashMap;
     Space Complexity: O()
  */
 public class MaximumXOROfTwoNumbersInAnArray {
-    public int findMaximumXOR(int[] nums) {
+    private static int findMaximumXOR(int[] nums) {
         Trie trie = new Trie();
         trie.insert(nums);
 
@@ -33,6 +33,14 @@ public class MaximumXOROfTwoNumbersInAnArray {
             max = Math.max(max, currSum); // get max number
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {3,10,5,25,2,8};
+        assert findMaximumXOR(arr1) == 28;
+
+        int[] arr2 = {14,70,53,83,49,91,36,80,92,51,66,70};
+        assert findMaximumXOR(arr2) == 127;
     }
 }
 
