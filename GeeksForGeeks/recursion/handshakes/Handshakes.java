@@ -25,6 +25,6 @@ public class Handshakes {
 
     public static void main(String[] args) {
         assert count(2) == 1;
-
+        assert count(4) == 2;
     }
 }
