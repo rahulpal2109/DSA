@@ -6,51 +6,33 @@ package GeeksForGeeks.array.coins_of_geekland;
     https://practice.geeksforgeeks.org/problems/257a9e27fb3e58255622c8dcb06e0919cc1c6c11/1
     Medium
 
-    Time Complexity: O(n)
-    Space Complexity: O(1)
+    Time Complexity: O()
+    Space Complexity: O()
  */
 public class CoinsOfGeekland {
-    private static int maximumSum(int[][] arr, int subGridSize) {
+    private static int maximumSum(int[][] arr, int N, int subGridSize) {
         int max = 0;
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.println("i = " + i + "; j = " + j);
+                //System.out.println("i = " + i + "; j = " + j);
                 sum = 0;
                 int k = subGridSize;
 
                 for (int p = i; p < arr.length && k > 0; k--, p++) {
                     int l = subGridSize;
                     for (int q = j; q < arr[i].length && l > 0; l--, q++) {
-                        System.out.println("p = " + p + "; q = " + q + "; sum= " + sum);
+                        //System.out.println("p = " + p + "; q = " + q + "; sum= " + sum);
                         sum += arr[p][q];
                     }
                 }
-                System.out.println("i = " + i + "; j = " + j + "; total sum= " + sum);
+                //System.out.println("i = " + i + "; j = " + j + "; total sum= " + sum);
                 max = Math.max(max, sum);
-                System.out.println();
+                //System.out.println();
             }
         }
 
         return max;
-    }
-
-    public static void main(String[] args) {
-        int[][] arr = { {1, 1, 1, 1, 1},
-                        {2, 2, 2, 2, 2},
-                        {3, 8, 6, 7, 3},
-                        {4, 4, 4, 4, 4},
-                        {5, 5, 5, 5, 5}};
-        int[][] arr2 = {{4}};
-
-        /*for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
-        }*/
-
-        System.out.println(maximumSum(arr, 3));
     }
 
     private static int maximumSumOptimized(int mat[][],int N,int k){
@@ -109,5 +91,27 @@ public class CoinsOfGeekland {
             }
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        int[][] arr1 = { {1, 1, 1, 1, 1},
+                {2, 2, 2, 2, 2},
+                {3, 8, 6, 7, 3},
+                {4, 4, 4, 4, 4},
+                {5, 5, 5, 5, 5}};
+        int[][] arr2 = {{4}};
+
+        /*for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }*/
+
+        assert maximumSum(arr1, arr1.length, 3) == 48;
+        assert maximumSum(arr2, arr2.length, 1) == 4;
+
+        assert maximumSumOptimized(arr1, arr1.length, 3) == 48;
+        assert maximumSumOptimized(arr2, arr2.length, 1) == 4;
     }
 }
