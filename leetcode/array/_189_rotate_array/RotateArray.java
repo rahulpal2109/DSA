@@ -12,7 +12,7 @@ import java.util.List;
     Medium
 
     Time Complexity: O(n)
-    Space Complexity: O(n)
+    Space Complexity: O(1)
 
     Logic:
     input:  [1,2,3,4,5,6,7]; k=3
