@@ -1,9 +1,6 @@
 package leetcode.array._189_rotate_array;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /*
     189. Rotate Array
