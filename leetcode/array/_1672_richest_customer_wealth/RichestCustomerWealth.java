@@ -6,7 +6,7 @@ package leetcode.array._1672_richest_customer_wealth;
     https://leetcode.com/problems/richest-customer-wealth/
     Easy
 
-    Time Complexity: O(n^2)
+    Time Complexity: O(m*n)
     Space Complexity: O(1)
  */
 public class RichestCustomerWealth {
