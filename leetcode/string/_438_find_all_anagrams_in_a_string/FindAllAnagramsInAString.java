@@ -2,6 +2,9 @@ package leetcode.string._438_find_all_anagrams_in_a_string;
 
 import java.util.*;
 
+/*
+
+ */
 public class FindAllAnagramsInAString {
     private static List<Integer> findAnagrams(String s, String t) {
         List<Integer> result = new LinkedList<>();
